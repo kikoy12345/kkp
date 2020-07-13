@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd14fa05-f6e5-4c0b-bfba-a9e157c3941a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kelas" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tahun" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from siswa where kelas = $P{kelas} and tahun = $P{tahun}]]>
+	</queryString>
+	<field name="id_siswa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tahun" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_siswa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="semester" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="147" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="125" width="127" height="20" uuid="e6f29946-bad8-4915-a31b-72cd3d3eec03"/>
+				<box leftPadding="5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perihal : Daftar Siswa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="277" y="125" width="63" height="20" uuid="d20ef9f8-f405-4e9f-8289-bdf472b422ef"/>
+				<box leftPadding="5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kelas}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="130" y="35" width="373" height="1" uuid="df1c7635-fa71-4475-8066-faad74ec60ef"/>
+			</line>
+			<staticText>
+				<reportElement x="127" y="24" width="386" height="47" uuid="f9b3152f-cc15-4e7a-90a6-8ddb8b4465d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Ujung Selatan Perum Wisma Cakra RT. 04/09 Kelurahan Limo Kecamatan Limo Kota Depok Jawa Barat Kode Pos 16515 Telp : 021-7536925]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="6" width="360" height="32" uuid="efa7d8d6-ea30-4e78-943e-4c5cc7ea3539"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMK CAKRA NUSANTARA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="50" y="0" width="60" height="65" uuid="6bd90a64-dc11-48ac-92d5-0303340bfe56"/>
+				<imageExpression><![CDATA["F:\\KKP\\SMK\\src\\logo\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="83" width="555" height="36" uuid="149f4ce2-38e9-46f9-b6c1-44aaa7c496fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daftar Siswa]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="277" height="20" uuid="c46577e7-8e1e-4b07-93a7-b172f2236c9a"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="277" height="20" uuid="4ba24410-6a82-4a80-b689-2847ad4ff06d"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="277" height="20" uuid="d5968f74-e4ef-48fc-b647-46f7dd250448"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineColor="#999999"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="2" width="277" height="20" uuid="745e4ce7-944e-43fc-b9b8-25c9bbe85f50"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineColor="#999999"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama_siswa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="181" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="158" width="25" height="20" uuid="60d5ae84-f2ee-4463-b478-0e92a371169a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="378" y="16" width="35" height="20" uuid="2bed5597-9194-4eca-9944-6b72a135a94b"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="36" width="100" height="15" uuid="9c5c140f-9006-4255-b46b-a14ecaf875db"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="116" width="100" height="15" uuid="91bc207e-079b-4254-bed2-fc43d17929ed"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[......................................]]></text>
+			</staticText>
+			<textField pattern="dd-MM-yyyy">
+				<reportElement x="413" y="16" width="100" height="20" uuid="8913180e-0bb4-4323-8c89-8383fec2e50b"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="397" y="51" width="100" height="15" uuid="13ddc182-05e1-46d7-8f22-b4d5d48881ba"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
